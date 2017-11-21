@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3381f8102055b104980054a766a5d514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustPower: 50
+  thrustPower: 100
   projectile: {fileID: 1464298915643276, guid: 66dee83859c540749ae721f796f79f6f, type: 2}
   spawn: {fileID: 116415175}
 --- !u!1 &651689301
@@ -1041,7 +1041,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1658270679}
   - component: {fileID: 1658270680}
-  - component: {fileID: 1658270681}
   - component: {fileID: 1658270682}
   m_Layer: 0
   m_Name: Player
@@ -1082,18 +1081,6 @@ MonoBehaviour:
   jumpHeight: 5
   moveToCursor: {fileID: 1824390327344364, guid: e36f279d65d7b814cad99d4974c32deb,
     type: 2}
---- !u!114 &1658270681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1658270678}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3db1e0264ac0b47905eeb00c298615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
 --- !u!54 &1658270682
 Rigidbody:
   m_ObjectHideFlags: 0

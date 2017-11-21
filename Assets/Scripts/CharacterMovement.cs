@@ -8,8 +8,10 @@ public class CharacterMovement : MonoBehaviour {
 	[SerializeField] private float moveSpeed = 0.70f;
 	[SerializeField] private float rotSpeed = 50.0f;
 	[SerializeField] private float jumpHeight = 2.5f;
-	private Animator ani;
+	//private Animator ani;
 	private bool isGrounded;
+
+
 
 	// MOUSE MOVEMENT
 	[SerializeField] GameObject moveToCursor;
@@ -17,7 +19,7 @@ public class CharacterMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		rb = GetComponent<Rigidbody>();
-		ani = GetComponent<Animator>();
+		//ani = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -59,6 +61,17 @@ public class CharacterMovement : MonoBehaviour {
 		if(!Input.anyKey) {
 			//ani.SetBool("isWalking", false);
 		}
+
+		// ---------------------------------------------------------
+		// LOOK TOWARDS MOUSE
+		// ---------------------------------------------------------
+		/*
+		Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+		float midPoint = (transform.position - Camera.main.transform.position).magnitude * 0.5f;
+
+		transform.LookAt(mouseRay.origin + mouseRay.direction * midPoint); 
+*/
+		//transform.LookAt(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
 		// ---------------------------------------------------------
 		// MOUSE MOVEMENT
