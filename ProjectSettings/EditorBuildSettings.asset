@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Persistent.unity
-  - enabled: 1
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/SecurityRoom.unity
-  - enabled: 1
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Market.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/TouchJoysticks/DemoScenes/DualJoystickDemo.unity
+    guid: 4c83b817e974056459ec52b8abe4ec62
