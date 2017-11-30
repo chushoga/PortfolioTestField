@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: ProjectorTestMaterialShadow
-  m_Shader: {fileID: 4800000, guid: ef906ac81d96a3743bd895a6e40c06c2, type: 3}
+  m_Shader: {fileID: 4800000, guid: d1b1088880949704d896f6cdc2f30077, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FalloffTex:
-        m_Texture: {fileID: 2800000, guid: 23d4fb11e0bcb7c4da216557ccb003df, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6ebc2814c3bab32419f65aa019efde01, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTex:
-        m_Texture: {fileID: 2800000, guid: 1a550096f32d91f4f8ecdaef645e6ae3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4371e20cc299ad04484e922917f8e8a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
