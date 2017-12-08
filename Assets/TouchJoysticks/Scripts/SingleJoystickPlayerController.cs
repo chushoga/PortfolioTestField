@@ -58,10 +58,28 @@ public class SingleJoystickPlayerController : MonoBehaviour
         if (input01 != Vector3.zero)
         {
             //Move player the same distance in each direction. Player must move in a circular motion.
- 
+
+			if(zMovementInput01 > 0) {
+				Debug.Log("FOWARD");
+			}
+
+			if(zMovementInput01 < 0) {
+				Debug.Log("BACKWARD");
+			}
+
+			if(xMovementInput01 > 0) {
+				Debug.Log("RIGHT");
+			}
+
+			if(xMovementInput01 < 0) {
+				Debug.Log("LEFT");
+			}
+
+
+
             float tempAngle = Mathf.Atan2(zMovementInput01, xMovementInput01);
-            xMovementInput01 *= Mathf.Abs(Mathf.Cos(tempAngle));
-            zMovementInput01 *= Mathf.Abs(Mathf.Sin(tempAngle));
+            //xMovementInput01 *= Mathf.Abs(Mathf.Cos(tempAngle));
+            //zMovementInput01 *= Mathf.Abs(Mathf.Sin(tempAngle));
 
             input01 = new Vector3(xMovementInput01, 0, zMovementInput01);
             input01 = transform.TransformDirection(input01);
@@ -74,7 +92,7 @@ public class SingleJoystickPlayerController : MonoBehaviour
             Vector3 lookingVector = temp - transform.position;
             if (lookingVector != Vector3.zero)
             {
-                myRotationObject.localRotation = Quaternion.Slerp(myRotationObject.localRotation, Quaternion.LookRotation(lookingVector), rotationSpeed * Time.deltaTime);
+               // myRotationObject.localRotation = Quaternion.Slerp(myRotationObject.localRotation, Quaternion.LookRotation(lookingVector), rotationSpeed * Time.deltaTime);
             }
             if (animator != null)
             {
