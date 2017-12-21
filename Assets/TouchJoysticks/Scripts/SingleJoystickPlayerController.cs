@@ -46,7 +46,7 @@ public class SingleJoystickPlayerController : MonoBehaviour
         input01 = singleJoystick.GetInputDirection();
 
         float xMovementInput01 = input01.x; // The horizontal movement from joystick 01
-        float zMovementInput01 = input01.y; // The vertical movement from joystick 01	
+		float zMovementInput01 = input01.y; // The vertical movement from joystick 01	
 
         // if there is no input on joystick 01
         if (input01 == Vector3.zero)
@@ -58,6 +58,8 @@ public class SingleJoystickPlayerController : MonoBehaviour
         if (input01 != Vector3.zero)
         {
             //Move player the same distance in each direction. Player must move in a circular motion.
+
+			Debug.Log(xMovementInput01);
 
 			if(zMovementInput01 > 0) {
 				Debug.Log("FOWARD");
@@ -78,10 +80,11 @@ public class SingleJoystickPlayerController : MonoBehaviour
 
 
             float tempAngle = Mathf.Atan2(zMovementInput01, xMovementInput01);
-            //xMovementInput01 *= Mathf.Abs(Mathf.Cos(tempAngle));
-            //zMovementInput01 *= Mathf.Abs(Mathf.Sin(tempAngle));
+			xMovementInput01 *= Mathf.Abs(Mathf.Cos(tempAngle));
+			zMovementInput01 *= Mathf.Abs(Mathf.Sin(tempAngle));
 
-            input01 = new Vector3(xMovementInput01, 0, zMovementInput01);
+
+			input01 = new Vector3(xMovementInput01, 0, zMovementInput01);
             input01 = transform.TransformDirection(input01);
             input01 *= moveSpeed;
 
@@ -92,7 +95,7 @@ public class SingleJoystickPlayerController : MonoBehaviour
             Vector3 lookingVector = temp - transform.position;
             if (lookingVector != Vector3.zero)
             {
-               // myRotationObject.localRotation = Quaternion.Slerp(myRotationObject.localRotation, Quaternion.LookRotation(lookingVector), rotationSpeed * Time.deltaTime);
+               myRotationObject.localRotation = Quaternion.Slerp(myRotationObject.localRotation, Quaternion.LookRotation(lookingVector), rotationSpeed * Time.deltaTime);
             }
             if (animator != null)
             {
