@@ -146,5 +146,6 @@ public class SingleJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     public Vector3 GetInputDirection()
     {
         return new Vector3(inputVector.x, inputVector.y, 0);
+		Debug.Log(inputVector.x + " | " + inputVector.y);
     }
 }

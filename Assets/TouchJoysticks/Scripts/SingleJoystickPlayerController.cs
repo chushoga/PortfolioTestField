@@ -62,24 +62,23 @@ public class SingleJoystickPlayerController : MonoBehaviour
 			Debug.Log(xMovementInput01);
 
 			if(zMovementInput01 > 0) {
-				Debug.Log("FOWARD");
+				//Debug.Log("FOWARD");
 			}
 
 			if(zMovementInput01 < 0) {
-				Debug.Log("BACKWARD");
+				//Debug.Log("BACKWARD");
 			}
 
 			if(xMovementInput01 > 0) {
-				Debug.Log("RIGHT");
+				//Debug.Log("RIGHT");
 			}
 
 			if(xMovementInput01 < 0) {
-				Debug.Log("LEFT");
+				//Debug.Log("LEFT");
 			}
 
 
-
-            float tempAngle = Mathf.Atan2(zMovementInput01, xMovementInput01);
+			float tempAngle = Mathf.Atan2(zMovementInput01, xMovementInput01);
 			xMovementInput01 *= Mathf.Abs(Mathf.Cos(tempAngle));
 			zMovementInput01 *= Mathf.Abs(Mathf.Sin(tempAngle));
 
