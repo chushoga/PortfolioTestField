@@ -45,6 +45,13 @@ public class SingleJoystickPlayerController : MonoBehaviour
         // get input from both joysticks
         input01 = singleJoystick.GetInputDirection();
 
+// ---------------------------------------------------------------
+// START HERE !!!!!!!!!!!!!!!!!!!!!!
+// ---------------------------------------------------------------
+	// ROTATE THE VECTOR 30 DEGREES
+// ---------------------------------------------------------------
+		input01 = Quaternion.Euler(0, -30, 0) * input01; // ADDED THIS LINE TO ROTATE THE VECTOR
+		// ---------------------------------------------------------------
         float xMovementInput01 = input01.x; // The horizontal movement from joystick 01
 		float zMovementInput01 = input01.y; // The vertical movement from joystick 01	
 
