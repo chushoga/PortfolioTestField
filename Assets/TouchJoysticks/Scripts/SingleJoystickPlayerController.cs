@@ -69,19 +69,19 @@ public class SingleJoystickPlayerController : MonoBehaviour
 			Debug.Log(xMovementInput01);
 
 			if(zMovementInput01 > 0) {
-				//Debug.Log("FOWARD");
+				Debug.Log("FOWARD");
 			}
 
 			if(zMovementInput01 < 0) {
-				//Debug.Log("BACKWARD");
+				Debug.Log("BACKWARD");
 			}
 
 			if(xMovementInput01 > 0) {
-				//Debug.Log("RIGHT");
+				Debug.Log("RIGHT");
 			}
 
 			if(xMovementInput01 < 0) {
-				//Debug.Log("LEFT");
+				Debug.Log("LEFT");
 			}
 
 
